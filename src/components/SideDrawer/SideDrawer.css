@@ -1,0 +1,188 @@
+.side-drawer {
+  height: 100%;
+  background: rgba(238, 235, 244, 1);
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  /* min-width: 700px; */
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.side-drawer.open {
+  transform: translateX(0);
+}
+
+.side-drawer ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-drawer li {
+  margin: 0.5rem 0;
+}
+
+.side-drawer a {
+  color: rgba(112, 112, 244, 1);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+/* .side-drawer a:hover,
+.side-drawer a:active {
+  color: #fa923f;
+  transform: translateY(-10px);
+} */
+
+/* ccccccccccccccc */
+.cd-close-nav {
+  /* 'X' close icon */
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  /* set the right position value so that it overlaps the .cd-nav-trigger*/
+  right: 6.25%;
+  top: 3.7%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.cd-close-nav::after,
+.cd-close-nav::before {
+  /* lines of 'X' icon */
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 32px;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(112, 112, 244, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.cd-close-nav::after {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.cd-close-nav::before {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.no-touch .cd-close-nav:hover {
+  opacity: 0.8;
+}
+
+/* diko mou class */
+.header_margin {
+  /* border-bottom: 1px;
+  border-width: 2px;
+  border-bottom-width: 2px;
+  border-bottom-color: rgba(112, 112, 244, 1);
+  border-bottom-style: solid; */
+}
+
+.H3_padding {
+  padding: 0.3rem 2rem;
+  color: rgba(112, 112, 244, 1);
+}
+
+/* to diko mou navbar */
+.list {
+  display: flex;
+  flex-wrap: column wrap;
+  justify-content: space-around;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.list-item {
+  width: 30%;
+  display: flex;
+  padding: 0.5em;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 2em;
+  align-content: center;
+  justify-content: space-around;
+}
+
+/* fafwfaaawf */
+.grid {
+  height: 100vh;
+  /* padding-top: 0.1rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-auto-rows: 1fr 1fr 1fr 1fr; */
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "AddressBook MedicalRecords"
+    "Notifications Dashboards"
+    "LogOut LogOut";
+}
+
+.AddressBook {
+  grid-area: AddressBook;
+}
+.MedicalRecords {
+  grid-area: MedicalRecords;
+}
+.Notifications {
+  grid-area: Notifications;
+}
+.Dashboards {
+  grid-area: Dashboards;
+}
+.LogOut {
+  grid-area: LogOut;
+}
+
+.grid div {
+  text-align: center;
+  border: 1px;
+  border-width: 1px;
+  border-width: 1px;
+  border-color: rgba(112, 112, 244, 1);
+  border-style: solid;
+  padding-top: 120px;
+}
+
+/* .grid div:last-child {
+  padding-top: 20%;
+} */
+
+.grid div:hover {
+  border-color: white;
+  background-color: #8abeb2 !important;
+}
+
+.grid div:hover a {
+  color: white;
+  transform: translateY(-10px);
+}
